@@ -1,0 +1,34 @@
+﻿@using PokerHandKata.Core.PlayingCards;
+
+<CardPicker CardPicked="AddCard" /><br />
+
+<div class="row">
+@foreach(var card in Cards)
+{
+	<div class="col-1">
+		<span style="font-size: 64pt; color:@(card.Suit.IsRed ? "red" : "black")">
+			@DisplayCard.AsUnicodeString(card)
+		</span>
+		<button @onclick="() => Remove(card)">Remove</button>
+	</div>
+}
+</div>
+
+@code {
+
+	[Parameter]
+	public required List<PlayingCard> Cards { get; set; }
+
+	public void AddCard(PlayingCard card)
+	{
+		Cards.Add(card);
+		StateHasChanged();
+	}
+
+	public void Remove(PlayingCard card)
+	{
+		Cards.Remove(card);
+		StateHasChanged();
+	}
+}
+

@@ -1,0 +1,31 @@
+﻿@using PokerHandKata.Core.PlayingCards;
+<select @bind="RankString">
+	@foreach(var rank in Rank.All())
+	{
+		<option value="@rank.ShortString">@rank.DisplayString</option>
+	}
+</select>
+<select @bind="SuitChar">
+	@foreach(var suit in Suit.All())
+	{
+		<option value="@suit.SuitCharacter">@suit.SuitCharacter</option>
+	}
+</select>
+
+<button @onclick="PickCard">Add Card To Hand</button>
+
+@code {
+	[Parameter]
+	public required Action<PlayingCard> CardPicked { get; set; }
+
+	public string RankString { get; set; } = Rank.Two.ShortString;
+	public char SuitChar { get; set; } = Suit.Hearts.SuitCharacter;
+
+	public void PickCard()
+	{
+		CardPicked(new PlayingCard(
+			Rank.From(RankString, err => throw new ArgumentException(err))!,
+			Suit.From(SuitChar, err => throw new ArgumentException(err))!
+		));
+	}
+}

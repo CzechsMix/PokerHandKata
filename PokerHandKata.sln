@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokerHandKata.Web", "PokerHandKata.Web\PokerHandKata.Web.csproj", "{6303FC4A-5847-4427-B8A3-CAC3D60FF6FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokerHandKata.Test", "PokerHandKata.Test\PokerHandKata.Test.csproj", "{48060622-AEDC-4C1F-97F8-9E9A4D20C336}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokerHandKata.Core", "PokerHandKata.Core\PokerHandKata.Core.csproj", "{3ECDBF28-2DD8-4C82-A247-B1B8AE9CFB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerHandKata.Client", "PokerHandKata.Client\PokerHandKata.Client.csproj", "{8CAECB3D-8826-41B1-AE1D-8721DC7D8D9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6303FC4A-5847-4427-B8A3-CAC3D60FF6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6303FC4A-5847-4427-B8A3-CAC3D60FF6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6303FC4A-5847-4427-B8A3-CAC3D60FF6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6303FC4A-5847-4427-B8A3-CAC3D60FF6FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48060622-AEDC-4C1F-97F8-9E9A4D20C336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48060622-AEDC-4C1F-97F8-9E9A4D20C336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48060622-AEDC-4C1F-97F8-9E9A4D20C336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48060622-AEDC-4C1F-97F8-9E9A4D20C336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECDBF28-2DD8-4C82-A247-B1B8AE9CFB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECDBF28-2DD8-4C82-A247-B1B8AE9CFB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECDBF28-2DD8-4C82-A247-B1B8AE9CFB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECDBF28-2DD8-4C82-A247-B1B8AE9CFB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CAECB3D-8826-41B1-AE1D-8721DC7D8D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CAECB3D-8826-41B1-AE1D-8721DC7D8D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CAECB3D-8826-41B1-AE1D-8721DC7D8D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CAECB3D-8826-41B1-AE1D-8721DC7D8D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B5146B7-D6A1-417C-AB68-D6062B66D060}
+	EndGlobalSection
+EndGlobal

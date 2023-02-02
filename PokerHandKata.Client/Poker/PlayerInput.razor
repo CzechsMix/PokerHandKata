@@ -1,0 +1,11 @@
+﻿@using PokerHandKata.Core.PlayingCards;
+
+<label>Name:</label>
+<input type="text" @bind-value="Player.Name" />
+<br />
+<HandPicker Cards="Player.Cards" />
+
+@code {
+	[Parameter]
+	public required PlayerForm Player { get; set; }
+}

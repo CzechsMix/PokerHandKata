@@ -1,0 +1,32 @@
+﻿<div class="row">
+	<div class="col-6">
+		<PlayerInput Player="PlayerOne" />
+	</div>
+	<div class="col-6">
+		<PlayerInput Player="PlayerTwo" />
+	</div>
+</div>
+<div class="row">
+	<div class="col-2 offset-5">
+	<button @onclick="PlayPoker">Play Poker!</button>
+	<br />
+	<span>@GameOutcome</span>
+	</div>
+</div>
+
+@code {
+	public PlayerForm PlayerOne { get; set; } = new();
+	public PlayerForm PlayerTwo { get; set; } = new();
+	public string GameOutcome { get; set; } = string.Empty;
+
+	[Inject]
+	public required PokerService.PlayPoker Play { get; set; }
+
+	public async void PlayPoker()
+	{
+		GameOutcome = "Calculating Winner...";
+		StateHasChanged();
+		GameOutcome = await Play(PlayerOne, PlayerTwo);
+		StateHasChanged();
+	}
+}
