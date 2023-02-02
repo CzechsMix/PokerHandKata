@@ -1,18 +1,24 @@
 ﻿@using PokerHandKata.Core.PlayingCards;
-<select @bind="RankString">
-	@foreach(var rank in Rank.All())
-	{
-		<option value="@rank.ShortString">@rank.DisplayString</option>
-	}
-</select>
-<select @bind="SuitChar">
-	@foreach(var suit in Suit.All())
-	{
-		<option value="@suit.SuitCharacter">@suit.SuitCharacter</option>
-	}
-</select>
+<div class="row mb-3">
+	<div class="col-2">
+		<select class="form-select" @bind="RankString">
+			@foreach(var rank in Rank.All())
+			{
+				<option value="@rank.ShortString">@rank.DisplayString</option>
+			}
+		</select>
+	</div>
+	<div class="col-2">
+		<select class="form-select" @bind="SuitChar">
+			@foreach(var suit in Suit.All())
+			{
+				<option value="@suit.SuitCharacter">@suit.SuitCharacter</option>
+			}
+		</select>
+	</div>
+</div>
 
-<button @onclick="PickCard">Add Card To Hand</button>
+<button class="btn btn-primary" @onclick="PickCard">Add Card To Hand</button>
 
 @code {
 	[Parameter]

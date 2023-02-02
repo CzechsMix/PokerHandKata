@@ -5,11 +5,11 @@
 <div class="row">
 @foreach(var card in Cards)
 {
-	<div class="col-1">
+	<div class="col-2">
 		<span style="font-size: 64pt; color:@(card.Suit.IsRed ? "red" : "black")">
 			@DisplayCard.AsUnicodeString(card)
 		</span>
-		<button @onclick="() => Remove(card)">Remove</button>
+		<button class="btn btn-danger" @onclick="() => Remove(card)">Remove</button>
 	</div>
 }
 </div>

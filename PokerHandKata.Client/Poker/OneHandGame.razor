@@ -1,16 +1,19 @@
-﻿<div class="row">
+﻿<div class="row mb-3">
 	<div class="col-6">
-		<PlayerInput Player="PlayerOne" />
+		<PlayerInput PlayerId="Player One" Player="PlayerOne" />
 	</div>
 	<div class="col-6">
-		<PlayerInput Player="PlayerTwo" />
+		<PlayerInput PlayerId="Player Two" Player ="PlayerTwo" />
+	</div>
+</div>
+<div class="row mb-3">
+	<div class="col-2 offset-5">
+		<button class="btn btn-primary" @onclick="PlayPoker">Play Poker!</button>
 	</div>
 </div>
 <div class="row">
 	<div class="col-2 offset-5">
-	<button @onclick="PlayPoker">Play Poker!</button>
-	<br />
-	<span>@GameOutcome</span>
+		<h4>@GameOutcome</h4>
 	</div>
 </div>
 
